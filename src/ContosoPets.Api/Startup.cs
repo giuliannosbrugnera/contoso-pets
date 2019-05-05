@@ -29,7 +29,7 @@ namespace ContosoPets.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContosoPetsContext>(options => options.UseInMemoryDatabase("ContosoPets"));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            services.AddMvc().AddNewtonsoftJson();
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
